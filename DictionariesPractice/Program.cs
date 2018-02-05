@@ -50,6 +50,73 @@ namespace DictionariesPractice
             {
                 Console.WriteLine(drink.Value);
             }
+
+            //create a dictionary for a theater coat check with 10 elements
+            //The key will be a number and the value will bethe coat style.
+            //Print all vaues to the console. 
+            Dictionary<int, string> coatCheck = new Dictionary<int, string>()
+            {
+
+                { 1, "Leather Jacket"},
+                { 2, "Trench Coat"},
+                { 3, "Navy Peacoat"},
+                { 4, "Varsity Jacket"},
+                { 5, "Leather Duster"},
+                { 6, "Windbreaker"},
+                { 7, "Travel Jacket"},
+                { 8, "Leather Jacket"},
+                {9, "Fleece Jacket" },
+                { 10, "Hooded Sweatshirt"}
+
+            };
+                foreach(KeyValuePair<int, string> coats in coatCheck)
+                {
+                    Console.WriteLine(coats.Value);
+                }
+
+            //Car valet, last name, the make of car. 10 cars. print all keys to the console
+            Dictionary<string, string> carValet = new Dictionary<string, string>()
+            {
+                { "Kline", "Corvet"},
+                { "Corbet", "Ford Truck"},
+                { "Dresden", "VW Bug"},
+                { "Terrpin", "Police Car"},
+                { "Tomiko", "Camry"},
+                { "McClintok", "Chevy Blazer"},
+                { "Jones", "Packard Sedan"},
+                { "King", "Hummer, Red"},
+                {"Stark", "Acura, also Red" },
+                { "Rogers", "Harley Motorcycle"}
+
+            };
+
+            foreach(KeyValuePair<string, string> cars in carValet)
+            {
+                Console.WriteLine(cars.Key);
+            }
+            //Zoo Animals, 10 of them, key is animal type, value is number of that type. Print the number of the highest quantity.
+
+            Dictionary<string, int> zooAnimals = new Dictionary<string, int>()
+            {
+                {"Rhino", 90 },
+                {"Lions", 85 },
+                {"Tigers", 10 },
+                {"Bears", 10 },
+                {"Crows", 85 },
+                {"Ravens", 100 },
+                {"Monkeys", 90 },
+                {"Aligators", 58 },
+                {"Snakes", 100 },
+                {"Iguanas", 30 }
+            };
+
+            foreach (var item in zooAnimals.OrderByDescending(key => key.Value))
+            {
+                Console.WriteLine(item);
+            }
+
+            
+                
         }
     }
 }
