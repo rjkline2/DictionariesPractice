@@ -115,8 +115,37 @@ namespace DictionariesPractice
                 Console.WriteLine(item);
             }
 
-            
-                
+            Dictionary<string, int> zoo = new Dictionary<string, int>()
+            {
+                {"Lion",4 },
+                {"Tiger",5 },
+                {"Bear, Black",3 },
+                {"Bear, Grizzly",2 },
+                {"Wolf",10 },
+                {"Flamingo",15 },
+                {"Elephant",6 },
+                {"Hippo",5 },
+                {"Rhino, White",4 },
+                {"Gorrilla",8 }
+            };
+            int highest = 0;
+            foreach (KeyValuePair<string, int> animal in zoo)
+            {
+                if (animal.Value > highest)
+                {
+                    highest = animal.Value;
+                }
+            }
+            foreach (KeyValuePair<string, int> animal in zoo)
+            {
+                if (animal.Value == highest)
+                {
+                    Console.WriteLine(animal.Key);
+                }
+            }
+
+
+
         }
     }
 }
