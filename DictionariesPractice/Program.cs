@@ -115,6 +115,14 @@ namespace DictionariesPractice
                 Console.WriteLine(item);
             }
 
+            //Remove the zoo animal with the lowest quantity from the dictionary using the Remove method.
+            
+            foreach (var item in zooAnimals.OrderByDescending(key => key.Value))
+            {
+                //zooAnimals.Values.Remove(30);
+                Console.WriteLine(item);
+            }
+
             Dictionary<string, int> zoo = new Dictionary<string, int>()
             {
                 {"Lion",4 },
@@ -128,22 +136,56 @@ namespace DictionariesPractice
                 {"Rhino, White",4 },
                 {"Gorrilla",8 }
             };
-            int highest = 0;
+            //int highest = 0;
+            //foreach (KeyValuePair<string, int> animal in zoo)
+            //{
+            //    if (animal.Value > highest)
+            //    {
+            //        highest = animal.Value;
+            //    }
+            //}
+            //foreach (KeyValuePair<string, int> animal in zoo)
+            //{
+            //    if (animal.Value == highest)
+            //    {
+            //        Console.WriteLine(animal.Key);
+            //    }
+            //}
+            //int lowest = 2;
+            //foreach (KeyValuePair<string, int> animal in zoo)
+            //{
+            //    if (animal.Value < lowest)
+            //    {
+            //        lowest = animal.Value;
+            //    }
+            //}
+            //foreach (KeyValuePair<string, int> animal in zoo)
+            //{
+            //    if (animal.Value == lowest)
+            //    {
+            //        Console.WriteLine(animal.Key);
+            //        animal.Value.Remove == lowest;
+            //        Console.WriteLine(animal);
+            //    }
+            //}
+            // Create a program that allows a user to input an animal name to check to see if the dictionary contains that animal name.
+            Console.WriteLine("Enter an animal name to see if it is in the zoo:");
+            string zooSearch = Console.ReadLine();
             foreach (KeyValuePair<string, int> animal in zoo)
             {
-                if (animal.Value > highest)
+                if (animal.Key == zooSearch)
                 {
-                    highest = animal.Value;
+                    Console.WriteLine("We have that animal, thank you!");
+                }
+                else
+                {
+                    Console.WriteLine("We do not have that animal, please add it to our list!");
+                    Console.WriteLine("Type in the animal's name: ");
+                    zoo.Keys = Console.ReadLine();
+                    Console.WriteLine("and now the quantity of the animal entered: ");
+                    zoo.ContainsValue = Console.ReadLine();
                 }
             }
-            foreach (KeyValuePair<string, int> animal in zoo)
-            {
-                if (animal.Value == highest)
-                {
-                    Console.WriteLine(animal.Key);
-                }
-            }
-
 
 
         }
