@@ -38,9 +38,18 @@ namespace DictionariesPractice
             drinkMachine.Add(14, "Sierra Mist");
             drinkMachine.Add(15, "LeCroix");
 
-            //count is a property.
+            //count is a property. Returns dictonary size.
             Console.WriteLine(drinkMachine.Count);
 
+            //We have another property, called .Key
+            foreach(KeyValuePair<int,string> drink in drinkMachine)
+            {
+                Console.WriteLine(drink.Key);
+            }
+            foreach(KeyValuePair<int,string> drink in drinkMachine)
+            {
+                Console.WriteLine(drink.Value);
+            }
         }
     }
 }
