@@ -18,6 +18,7 @@ namespace DictionariesPractice
                 {"Michelle", 100 }
             };
 
+       
         }
     }
 }
